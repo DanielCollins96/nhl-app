@@ -7,7 +7,7 @@ class PostList extends Component {
     render(){
         return (
             <div>
-                <h1>{PostData.team}</h1>
+                <h1>{PostData.team + ' Would fuck you up'}</h1>
                 <div className="Players">
                     {PostData.roster.map((playa, index)=>{
                         return <div className="Player">
