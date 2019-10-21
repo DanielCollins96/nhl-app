@@ -1,0 +1,21 @@
+.Player {
+    width: 250px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.Player:hover,
+.Player:active {
+    background-color: rgb(255, 60, 60);
+}
+
+ 
+.Players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
