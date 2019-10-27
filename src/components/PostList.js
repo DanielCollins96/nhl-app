@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Card from './Card/Card';
 import PostData from '../data/FlamesRecords.json';
 
 import './PostList.css';
@@ -11,6 +12,7 @@ class PostList extends Component {
                 <div className="Players">
                     {PostData.roster.map((playa, index)=>{
                         return <div className="Player">
+                        <Card />
                         <h2>{playa.name}</h2>
                         <img src={playa.image} alt="Player Headshot"/>
                         <p>{playa.number}</p>
