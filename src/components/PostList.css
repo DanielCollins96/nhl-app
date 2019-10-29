@@ -1,6 +1,6 @@
 .Player {
     width: 250px;
-    padding: 16px;
+    padding: 5px;
     text-align: center;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
@@ -19,3 +19,7 @@
     flex-wrap: wrap;
     justify-content: center;
 } 
+
+@media (min-width: 800px) {
+    
+}
