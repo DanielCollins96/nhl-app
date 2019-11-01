@@ -6,6 +6,10 @@ import './PostList.css';
 
 class PostList extends Component {
     render(){
+         const dog = Object.entries(PostData)
+
+        console.log(Object.entries(PostData))
+        // console.log(dog)
         return (
             <div>
                 <h1>{PostData.team}</h1>
@@ -13,13 +17,16 @@ class PostList extends Component {
                     {PostData.roster.map((playa, index)=>{
                         return <div className="Player">
                         <Card 
+                            yolo={[...dog]}
                             name={playa.name} 
                             image={playa.image}
                             number={playa.number}
                             position={playa.position}
                             height={playa.height}
                             weight={playa.weight}
-                            age={playa.age}/>
+                            logo={PostData.logo}
+                             age={playa.age}
+                            />
                         </div>
                     })}
                 </div>

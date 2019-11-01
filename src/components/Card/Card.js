@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import logo from '../../data/TeamLogos.json';
 
 import './Card.css'
 import { tsParenthesizedType } from '@babel/types';
@@ -43,7 +44,7 @@ class Card extends Component {
     <div className="card">
         <div className='header'>
             <div className="medal">
-                {/* Logo */}
+                <img src={this.props.logo} alt="team-flames" />
                 <strong>{this.props.number}</strong>
                 <strong>{this.props.position}</strong> 
             </div>
