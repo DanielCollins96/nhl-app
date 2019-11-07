@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Teams from "../../container/Teams/Teams";
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,7 +21,7 @@ const toolbar = props => (
             <Link to="/about">Players</Link>
           </li>
           <li>
-            <Link to="/users">Teams</Link>
+            <Link to="/Teams">Teams</Link>
           </li>
         </ul>
       </nav>
@@ -30,9 +32,9 @@ const toolbar = props => (
         <Route path="/Players">
           {/* <About /> */}
         </Route>
-        <Route path="/Teams">
+        <Route path="/Teams" exact component={Teams} />
           {/* <Users /> */}
-        </Route>
+
         <Route path="/">
           {/* <Home /> */}
         </Route>
