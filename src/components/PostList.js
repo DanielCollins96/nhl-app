@@ -15,10 +15,12 @@ class PostList extends Component {
                 <h1>{PostData.team}</h1>
                 <div className="Players">
                     {PostData.roster.map((playa, index)=>{
-                        return <div className="Player">
+                        return <div >
                         <Card 
                             yolo={[...dog]}
                             name={playa.name} 
+                            firstname={playa.firstname} 
+                            lastname={playa.lastname} 
                             image={playa.image}
                             number={playa.number}
                             position={playa.position}

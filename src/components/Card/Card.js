@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from '../../data/TeamLogos.json';
 
 import './Card.css'
+import './Card.scss';
 import { tsParenthesizedType } from '@babel/types';
 
 class Card extends Component {
@@ -48,7 +49,7 @@ class Card extends Component {
                 <strong>{this.props.number}</strong>
                 <strong>{this.props.position}</strong> 
             </div>
-                <h2 className="Playername">{this.props.name.split(' ')}</h2>
+                <h2 className="Playername">{this.props.firstname} {this.props.lastname}</h2>
         </div>
         <div className="card-body">
             {bodyContent}
