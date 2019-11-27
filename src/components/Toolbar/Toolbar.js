@@ -1,46 +1,14 @@
 import React from 'react';
 
-import Teams from "../../container/Teams/Teams";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+// import Teams from "../../container/Teams/Teams";
+import NavigationItems from '../Navigation/NavigationItems';
+import classes from './Toolbar.css';
 
 
-const toolbar = props => (
-    <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">Players</Link>
-          </li>
-          <li>
-            <Link to="/Teams">Teams</Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
-      <Switch>
-        <Route path="/Players">
-          {/* <About /> */}
-        </Route>
-        <Route path="/Teams" exact component={Teams} />
-          {/* <Users /> */}
-
-        <Route path="/">
-          {/* <Home /> */}
-        </Route>
-      </Switch>
-    </div>
-  </Router>
+const toolbar = (props) => (
+  <header className={classes.Toolbar}>
+    <NavigationItems />
+  </header>
 );
 
 export default toolbar;

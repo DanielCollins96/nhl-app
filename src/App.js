@@ -1,16 +1,28 @@
-import React from 'react';
-import PostList from '../src/components/PostList';
-import Toolbar from './components/Toolbar/Toolbar';
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+
+import Layout from './hoc/Layout/Layout';
+import Roster from './container/Roster/Roster';
+import Teams from './container/Teams/Teams';
+// import Toolbar from './components/Toolbar/Toolbar';
+
 import './App.css';
 
-function App() {
+class App extends Component {
+  render() {
   return (
     <div className="App">
-      <Toolbar />
-      <PostList />
+    <Layout>
+      <Switch>
+         <Route path="/Players" component={Roster} />
+         <Route path="/Teams" component={Teams} />
+      </Switch>      
+    </Layout>
+
      
     </div>
   );
+}
 }
 
 export default App;

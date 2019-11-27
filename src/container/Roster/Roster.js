@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import PostData from '../data/FlamesRecords.json';
 
-import './PostList.css';
+import Auxil from '../../hoc/Auxil/Auxil';
+
+import PostData from '../../data/FlamesRecords.json';
+
+import './Roster.css';
 
 class PostList extends Component {
     render(){
         return (
-            <div>
+            <Auxil>
+                <div>
                 <h1>{PostData.team}</h1>
                 <div className="Players">
                     {PostData.roster.map((playa, index)=>{
@@ -18,8 +22,9 @@ class PostList extends Component {
                         </div>
                     })}
                 </div>
-            </div>
-        )
+                </div>
+            </Auxil>
+        );
     }
 }
 
