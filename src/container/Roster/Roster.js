@@ -9,8 +9,8 @@ import './Roster.css';
 class PostList extends Component {
     render(){
         return (
-            <Auxil>
-                <div>
+            // <Auxil>
+                <div className="playerpage">
                 <h1>{PostData.team}</h1>
                 <div className="Players">
                     {PostData.roster.map((playa, index)=>{
@@ -23,7 +23,7 @@ class PostList extends Component {
                     })}
                 </div>
                 </div>
-            </Auxil>
+            // </Auxil>
         );
     }
 }

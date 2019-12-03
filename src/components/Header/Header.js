@@ -6,21 +6,31 @@ import NavigationItems from '../Navigation/NavigationItems';
 import classes from './Header.css';
 
 
-const toolbar = () => (
-  <nav>
-  <NavLink exact activeClassName="active" to="/">
-    Home
-  </NavLink>
-  <NavLink activeClassName="active" to="/Roster">
-    Roster
-  </NavLink>
-  <NavLink activeClassName="active" to="/Teams">
-    Teams
-  </NavLink>
+const header = () => (
+  <nav className="navbar">
+    {/* <h3>Hockey</h3> */}
+    <NavLink exact 
+      activeClassName="navlink_active" 
+      className="navlink"
+      to="/">
+        Home
+    </NavLink>
+    <NavLink 
+      activeClassName="navlink_active" 
+      className="navlink"
+      to="/Roster">
+        Roster
+    </NavLink>
+    <NavLink 
+      activeClassName="navlink_active" 
+      className="navlink"
+      to="/Teams">
+        Teams
+    </NavLink>
 </nav>
 );
 
-export default toolbar;
+export default header;
 
 
 

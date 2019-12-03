@@ -13,13 +13,34 @@
     z-index: 90;
 }
 
-.Toolbar nav {
-    height: 100%;
-}
-
-.Logo {
-    height: 90%;
-}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #eceff1;
+  }
+  
+  .navlink {
+    margin: 1em;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: .3em;
+    text-indent: .3em;
+    color: #181818;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .navlink:hover {
+    transform: translateY(-2px);
+  }
+  
+  .navlink_active {
+    border-bottom: 3px solid #29b6f6;
+    transition: border-bottom .5s ease-in-out;
+  }
 
 @media (max-width: 499px) {
     .DesktopOnly {
