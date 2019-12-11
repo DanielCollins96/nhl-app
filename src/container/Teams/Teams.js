@@ -1,36 +1,21 @@
 import React, { Component,useState, useEffect } from 'react';
 
+import TeamLogos from '../../data/cleanLogos.json'
 import classes from './Teams.css';
 
 const Teams = () => {
 
-    const [teams, setTeams] = useState({});
+    // console.log(TeamLogos.teams)
 
-    async function fetchData() {
-        const res = await fetch("https://statsapi.web.nhl.com/api/v1/teams");
-        res
-        .json()
-        // .then(res => setTeams(res))
-        .then(res => res.body)
-        .then(console.log(res))
-        .catch(err => console.log('errr'))
-    }
-
-    useEffect(() => {
-        fetchData();
-    });
-
-
-
-
+    console.log(TeamLogos.teams)
         return (
-            <div className="tampage">
-                <h1>hi</h1>
-                {/* {this.state.map((t,index)=> { */}
-                    {/* // return <h2>{t.name}</h2> */}
-                {/* })} */}
-                {/* <h2>{this.state.teams}</h2> */}
-                {/* <h2>{this.state.data.teams.name}</h2> */}
+            <div className="teampage">
+                <h1>{TeamLogos.teams.id}</h1>
+                <div>
+                    {TeamLogos.team}
+         
+                </div>
+  
                 
             </div>
         );
@@ -38,3 +23,5 @@ const Teams = () => {
 
 
 export default Teams;
+
+// TeamLogos.teams.forEach(function(team){
