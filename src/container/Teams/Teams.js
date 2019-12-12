@@ -5,17 +5,22 @@ import classes from './Teams.css';
 
 const Teams = () => {
 
-    // console.log(TeamLogos.teams)
+    console.log(TeamLogos.teams)
 
     console.log(TeamLogos.teams)
         return (
             <div className="teampage">
-                <h1>{TeamLogos.teams.id}</h1>
-                <div>
-                    {TeamLogos.team}
-         
+                {/* <h1>{TeamLogos.teams[0].name}</h1> */}
+                <div className="Teams">
+                    {TeamLogos.teams.map((tm, index)=>{
+                        return <div className="Player">
+                        <h2>{tm.name}</h2>
+                        <img src={tm.logo} height="100px"alt="Player Headshot"/>
+                        <p>{tm.conference}</p>
+                        <p>{tm.position}</p>
+                        </div>
+                    })}
                 </div>
-  
                 
             </div>
         );
