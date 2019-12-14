@@ -22,6 +22,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.TeamCard:hover,
+.TeamCard:active {
+    background-color:  #a3a375;
+}
+
 ul{
     list-style-type: none;
     padding: none
