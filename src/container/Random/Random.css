@@ -1,0 +1,13 @@
+.rosters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team {
+    background: lightcoral;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}

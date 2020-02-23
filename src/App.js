@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 // import Layout from './hoc/Layout/Layout';
 import Roster from './container/Roster/Roster';
 import Teams from './container/Teams/Teams';
+import Random from './container/Random/Random';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 
@@ -17,9 +18,10 @@ class App extends Component {
       {/* <Nav /> */}
     <Header />
       <Switch className="">
-         <Route path="/" exact component={Home} />
+         <Route path="/" exact component={Random} />
          <Route path="/Roster" component={Roster} />
          <Route path="/Teams" component={Teams} />
+         {/* <Route path="/Misc" component={Random} /> */}
       </Switch>      
 
     {/* </Layout> */}

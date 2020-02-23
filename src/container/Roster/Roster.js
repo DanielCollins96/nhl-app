@@ -7,6 +7,34 @@ import PostData from '../../data/FlamesRecords.json';
 import './Roster.css';
 
 class PostList extends Component {
+    state = {
+        loaded: false,
+        roster: [],
+        baseURL: 'https://statsapi.web.nhl.com/api/v1/'
+    }
+
+    componentDidMount () {
+        fetch(this.state.baseURL + 'teams/1?expand=team.roster')
+        .then((response) => {
+            // console.log(response)
+            return response.json()
+        })
+        .then((res) => {
+            console.log(res.teams[0])
+            return this.setState({roster: res.teams[0].roster.roster})
+            // this.state.teams = res.teams
+
+        })
+        .then((updated) => {
+            this.setState({loaded: true});
+            console.log(this.state.roster);
+        })
+        .catch((error) => {
+            console.log('uhoh', error)
+        })
+    }
+
+
     render(){
         return (
             // <Auxil>
