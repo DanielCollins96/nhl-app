@@ -41,14 +41,14 @@ class PostList extends Component {
         return (
             // <Auxil>
                 <div className="playerpage">
-                <h1>{PostData.team}</h1>
+                <h1>{this.state.roster.team}</h1>
                 <div className="Players">
-                    {PostData.roster.map((playa, index)=>{
+                    {this.state.roster.map((playa, index)=>{
                         return <div className="Player">
-                        <h2>{playa.name}</h2>
-                        <img src={playa.image} alt="Player Headshot"/>
-                        <p>{playa.number}</p>
-                        <p>{playa.position}</p>
+                        <h2>{playa.person.fullName}</h2>
+                        {/* <img src={playa.image} alt="Player Headshot"/> */}
+                        <p>{playa.jerseyNumber}</p>
+                        <p>{playa.position.abbreviation}</p>
                         </div>
                     })}
                 </div>
