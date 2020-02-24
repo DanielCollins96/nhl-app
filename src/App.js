@@ -11,15 +11,18 @@ import Nav from './components/Nav/Nav';
 import './App.css';
 
 class App extends Component {
+
+
   render() {
-  return (
-    <div className="App">
+    // console.log('hh')
+    return (
+      <div className="App">
     {/* <Layout> */}
       {/* <Nav /> */}
     <Header />
       <Switch className="">
          <Route path="/" exact component={Random} />
-         <Route path="/Roster" component={Roster} />
+         <Route path={"/Roster/:id"} component={Roster} />
          <Route path="/Teams" component={Teams} />
          {/* <Route path="/Misc" component={Random} /> */}
       </Switch>      

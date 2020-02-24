@@ -47,7 +47,7 @@ class Random extends Component {
                     return <div className="team">
                             <h3>{team.name}</h3>
                             <a href={team.officialSiteUrl}>Website</a><br></br>
-                            <NavLink to={`/Roster/${team.id}`}>Roster</NavLink>
+                            <NavLink to={`/Roster/${team.id}`} >Roster</NavLink>
                             </div>
                     
                 })}

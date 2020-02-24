@@ -14,9 +14,11 @@ class PostList extends Component {
     }
 
     componentDidMount () {
-        fetch(this.state.baseURL + 'teams/1?expand=team.roster')
+        console.log("???????")
+        fetch(this.state.baseURL + `teams/${this.props.match.params.id}?expand=team.roster`)
         .then((response) => {
-            // console.log(response)
+            console.log(this.props.match.params)
+            console.log('why')
             return response.json()
         })
         .then((res) => {
